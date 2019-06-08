@@ -155,7 +155,6 @@ setup.plothooks = {
       const blacksmithPool = town.buildings.smithy
       const smithy = setup.objectArrayFetcher(blacksmithPool)
       console.log(smithy)
-      // var blacksmith = smithy.blacksmith
       const npc = setup.createNPC(town, {
         gender: 'man',
         profession: 'blacksmith',
@@ -299,21 +298,6 @@ setup.plothooks = {
       return 'As the PCs walk across a bridge over the river that cuts through town, they notice a couple of young boys standing near the edge of the bridge. They each have a large rock in their hands, and are watching one of the approaching river boats with smiles on their faces. As the boat gets closer, ' + setup.profile(npc, 'one of the boys') + ' raises his rock as if he is going to drop it.'
     }
   },
-  // 'Nobody Hurts Ma': {
-  //
-  //   exclusions: function (town) {
-  //     return true
-  //   },
-  //   function: function (town) {
-  //     var npc = setup.createNPC(town, {
-  //       background: 'noble',
-  //       gender: 'man',
-  //       profession: 'blacksmith',
-  //       background: 'blacksmith'
-  //     })
-  //     return "The PCs come upon a sobbing woman holding a teenage boy who looks to have been severely beaten. If the PCs ask the woman if they can help, she explains her youngest son was beaten up by a gang of toughs. Of more immediate danger though, is that her oldest son has gone off to exact revenge on them, and she's afraid of what they will do to him."
-  //   }
-  // },
   'The Corrupt Guards': {
     type: ['event'],
     function (town) {
@@ -879,7 +863,6 @@ setup.plothooks = {
         hasClass: false,
         background: 'noble'
       })
-      // #
       return 'WHO AM I?: ' + setup.profile(npc, 'I') + ' woke up in a gutter this morning outside of ' + setup.profile(building, '', 'town.buildings.tavern') + '. I do not remember who I am, where I am from, what my name is, anything. I have a large sack of gold on my person and I am currently renting at the Hill Street Inn and Tavern for the foreseeable future. If you assist me in regaining my lost memories I would be more than happy to properly compensate you, for it seems that whoever I am, it is a man of means.'
     }
   },
@@ -890,7 +873,6 @@ setup.plothooks = {
     },
     function (town) {
       const building = setup.objectArrayFetcher(town.buildings.tavern)
-      // #
       return setup.profile(building, '', 'town.buildings.tavern') + ' needs (at least one more) bouncer for annual all-you-can-drink QuaffFest Celebration tomorrow. Usual bouncer called in sick and can’t make it. Will pay 5s/hr and after your shift that evening all your drinks are free!'
     }
   },
@@ -1139,7 +1121,6 @@ setup.plothooks = {
         background: 'commoner',
         note: 'For whatever reason, loves being abused.'
       })
-      // #
       return 'NEEDED: Someone competent in the ways of word to berate, yell, and speak ill of ' + setup.profile(npc, 'me') + '. Willing to pay. Discretion is key. Meet me during the night 2 alleys up from ' + setup.profile(building, '', 'town.buildings.tavern') + ' in order to discuss terms.'
     }
   },
@@ -1151,7 +1132,6 @@ setup.plothooks = {
         background: 'sailor',
         profession: 'pirate'
       })
-      // #
       return 'LOST: 3 peg legs, a hook, 5 eye patches, and a talking parrot. If found please return to ' + setup.profile(npc) + ' of ‘The Luckiest Crew’ down at the pier.'
     }
   },
@@ -1176,8 +1156,6 @@ setup.plothooks = {
         hasClass: false,
         background: 'commoner'
       })
-      // #
-      // <<link ' + JSON.stringify(tavern.name) + '>><<set $selected to {key: "tavern", index: ' + JSON.stringify(tavernIndex) + ', building: ' + tavern + '}>><<run console.log("Set $selected.")>><<set $tavern to ' + tavern + '>><<goto "TavernOutput">><</link>>
       return 'Fence need painted. Good pay. Contact ' + setup.profile(npc) + ' at ' + setup.profile(building, '', 'town.buildings.tavern') + '. Twist is, the fence is 10 feet tall and almost a mile long.'
     }
   },
@@ -1229,11 +1207,6 @@ setup.plothooks = {
   'Thieves Cant Thieve Here': {
     type: ['paper'],
     function (town) {
-      // var npc = setup.createNPC(town, {
-      //   hasClass: false,
-      //   background: 'commoner'
-      // })
-      // #
       return 'A set of seemingly innocuous symbols is carved into the side of a barrel underneath the board, all in Thieves’ Cant. The symbols are being used for a purpose they’re very much not meant for, and the message is patchy and uncertain. ‘Dangerous Area.’ ‘Owner not home.’ ‘Owner is Vigilant.’ Meaning: One for the rogues! The local thieves’ guild has found that their missions in the area have ended… poorly. Their new recruits are raving about some kind of spirit, and the veterans insist that something just isn’t right.'
     }
   },
@@ -1303,11 +1276,6 @@ setup.plothooks = {
   'Riddle Maker Needed': {
     type: ['paper'],
     function (town) {
-      // var npc = setup.createNPC(town, {
-      //   hasClass: false,
-      //   background: 'commoner'
-      // })
-      // #
       return 'Looking for riddle maker. You make riddles, we buy ’em! For more information contact your local Wizards Association.'
     }
   },
