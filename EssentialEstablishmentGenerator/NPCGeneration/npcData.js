@@ -969,7 +969,6 @@ setup.npcData = {
   doesnt: {
     'wants to grow a beard': {
       probability: 5,
-      // type: ['says', 'doesnt', 'hides'],
       exclusions (town, npc) {
         if (npc.beard || (npc.gender !== 'man' && random(0, 100) <= npc.beardProbability)) {
           return false
@@ -983,7 +982,6 @@ setup.npcData = {
     },
     'no longer loves partner': {
       probability: 5,
-      // type: ['says', 'doesnt', 'hides'],
       exclusions (town, npc) {
         if (!npc.partnerID) {
           return false
@@ -997,7 +995,6 @@ setup.npcData = {
     },
     'has a sizeable inheritance': {
       probability: 5,
-      // type: ['says', 'doesnt', 'hides'],
       exclusions (town, npc) {
         return true
       },
@@ -1008,7 +1005,6 @@ setup.npcData = {
     },
     'wants to run away': {
       probability: 5,
-      // type: ['says', 'doesnt', 'hides'],
       exclusions (town, npc) {
         if (npc.background !== 'hermit') {
           return true
@@ -1996,11 +1992,6 @@ setup.npcData = {
   },
   backgroundTraits: {
     'acolyte': {
-      // 'knownLanguages': function (npc) {
-      //   var allLanguages = setup.npcData.standardLanguages.concatUnique(setup.npcData.exoticLanguages)
-      //   var availableLanguages = allLanguages.delete(npc.knownLanguages)
-      //   return availableLanguages.pluck()
-      // },
       extraLanguage: true,
       backgroundOrigin: [
         'I ran away from home at a young age, and found refuge in a temple.',
@@ -2039,7 +2030,6 @@ setup.npcData = {
       wealth: 1500
     },
     'charlatan': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'As a youngster, I was left to my own devices. My knack for manipulating people helped me survive.',
         'I learned early on that people are easy to exploit, and are gullible and too trusting.',
@@ -2076,7 +2066,6 @@ setup.npcData = {
       wealth: 1500
     },
     'criminal': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'I resented authority in my younger days, and I saw a life of crime as a way to get back at those that I thought had wronged me.',
         'I resented authority as a youngster, and saw a life of crime as the best way to fight back against tyranny and oppression.',
@@ -2107,7 +2096,6 @@ setup.npcData = {
       wealth: 1500
     },
     'entertainer': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'Members of my family made ends meet by performing, so it was fitting for me to follow their example',
         'I always had a keen insight into what made other people laugh and cry. A life as an entertainer seemed to be the natural continuation of that.',
@@ -2138,7 +2126,6 @@ setup.npcData = {
       wealth: 1500
     },
     'folk hero': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'I learned what was right and wrong from my family.',
         'I was always enamored by tales of heroes and wished I could be something more than ordinary.',
@@ -2197,7 +2184,6 @@ setup.npcData = {
       wealth: 1500
     },
     'guild artisan': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'I was apprenticed to a master who taught me the guild’s business.',
         'I helped a guild artisan keep a secret, and in return, I was taken on as an apprentice.',
@@ -2228,7 +2214,6 @@ setup.npcData = {
       wealth: 1500
     },
     'hermit': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'My enemy ruined my reputation, and I had to flee to a life of solitude to escape further disparagement.',
         'I am comfortable with isolation, as I seek inner peace.',
@@ -2258,11 +2243,6 @@ setup.npcData = {
       wealth: 500
     },
     'noble': {
-      // 'knownLanguages': function (npc) {
-      //   var allLanguages = setup.npcData.standardLanguages.concatUnique(setup.npcData.exoticLanguages)
-      //   var availableLanguages = allLanguages.delete(npc.knownLanguages)
-      //   return availableLanguages.pluck()
-      // },
       extraLanguage: true,
       backgroundOrigin: [
         'My family has been disgraced, and I intend to restore our once pristine reputation.',
@@ -2294,7 +2274,6 @@ setup.npcData = {
       wealth: 2500
     },
     'outlander': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'I spent a lot of time in the wilderness as a youngster, and I came to love that way of life.',
         "From a young age, I couldn't abide the stink of cities, and sought out the wilderness for respite from the chaos of people.",
@@ -2325,11 +2304,6 @@ setup.npcData = {
       wealth: 1000
     },
     'sage': {
-      // 'knownLanguages': function (npc) {
-      //   var allLanguages = setup.npcData.standardLanguages.concatUnique(setup.npcData.exoticLanguages)
-      //   var availableLanguages = allLanguages.delete(npc.knownLanguages)
-      //   return availableLanguages.pluck()
-      // },
       extraLanguage: true,
       backgroundOrigin: [
         'I was naturally curious, so I packed up and went to a university to learn more about the world.',
@@ -2361,7 +2335,6 @@ setup.npcData = {
       wealth: 1000
     },
     'sailor': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'I was press-ganged by pirates and forced to serve as a deck-hand on their ship until I could escape from their clutches.',
         'I wanted to see the world, so I signed on as a deck- hand for a merchant ship.',
@@ -2392,7 +2365,6 @@ setup.npcData = {
       wealth: 1500
     },
     'soldier': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         "I wanted fame and fortune, so I signed up to the militia to prove my mettle. I don't think I knew what I was doing, but my determination carried me through my contract, and I never stopped.",
         'I wanted to protect my village from monsters, so I learnt swordcraft and how to fight. Then I learnt that you could earn coin for it, too.',
@@ -2421,7 +2393,6 @@ setup.npcData = {
       wealth: 1000
     },
     'urchin': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         'My parents died, leaving nobody to look after me, so I took care of myself.',
         'I had to escape my homelife. I lived off crumbs and scraps, but it was better than the alternative.',
@@ -2451,7 +2422,6 @@ setup.npcData = {
       wealth: 1500
     },
     'commoner': {
-      // 'knownLanguages': function (npc) { return npc },
       backgroundOrigin: [
         "I was born into poverty. I've slowly worked my way to where I am today.",
         'I had a bad string of bets which left me with no other choice than to skip town.',
@@ -2565,7 +2535,6 @@ setup.npcData = {
     }
   },
   bodyParts: {
-    // The most notable physical trait of $currentNPC.firstName is that $currentNPC.heshe has ______
     head: {
       hair: [
         'thick, long hair down to their hips',
@@ -2618,7 +2587,6 @@ setup.npcData = {
         'thick, tangled hair',
         'neatly combed hair'
       ],
-      // covers eyes, eyelids, and eyebrows
       eyes: [
         'eyes like a hawk',
         'quick-witted eyes',
@@ -2735,7 +2703,6 @@ setup.npcData = {
         'a rather greasy looking nose',
         'a pockmarked nose'
       ],
-      // covers mouth and cheeks
       mouth: [
         'long thin lips',
         'thick, full lips',
@@ -2786,7 +2753,6 @@ setup.npcData = {
         'an underbite',
         'an overbite'
       ],
-      // covers chin, jaw, and neck
       chin: [
         'a strong, jutting chin',
         'an angular chin',

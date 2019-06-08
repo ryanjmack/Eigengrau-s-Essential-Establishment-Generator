@@ -12,7 +12,6 @@ setup.fetchRace = function (town) {
   }
 
   let random = Math.floor(randomFloat(1) * totalWeight)
-  // console.log(random)
   for (let i = 0; i < pool.length; i++) {
     random -= pool[i]
     if (random < 0) {
@@ -21,9 +20,6 @@ setup.fetchRace = function (town) {
       break
     }
   }
-  // console.log(pool)
-  // console.log(namePool)
-  // console.log(selected)
-  // console.log(namePool[index])
+
   return namePool[index]
 }

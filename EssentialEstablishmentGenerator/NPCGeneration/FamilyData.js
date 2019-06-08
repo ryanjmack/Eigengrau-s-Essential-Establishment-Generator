@@ -67,7 +67,6 @@ setup.familyData = {
   },
 
   relativeBase: (npc) => ({
-    // lastName: npc.lastName,
     race: npc.race,
     family: npc.family,
     canBeCustom: false,

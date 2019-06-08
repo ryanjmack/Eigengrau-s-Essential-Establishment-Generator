@@ -25,15 +25,6 @@ setup.createLivingStandards = function (town, npc) {
     return desc[0] <= npc.finances.wageVariation
   })
   console.log(note)
-  // if (note !== '') {
-  //   npc.note.push(npc.firstName + ' ' + [
-  //     'has been',
-  //     'has recently been',
-  //     'is',
-  //     'is currently'
-  //   ].seededrandom() +
-  //       note + '.')
-  // }
 
   setup.addPercentage = function (target, integer) {
     return target / 100 * integer
@@ -41,17 +32,6 @@ setup.createLivingStandards = function (town, npc) {
 
   // eslint-disable-next-line no-unused-vars
   const townVariance = ((town.roll.wealth - 50) / 5)
-
-  /* Object.defineProperty(npc.finances.grossIncome, {
-    get: setup.addPercentage(
-      setup.addPercentage(profession.dailyWage, npc.finances.wageVariation),
-      townVariance)
-  })
-  Object.defineProperty(npc.finances.livingStandard, {
-    get: setup.livingStandards.find(function (desc) {
-      return desc[0] <= npc.finances.grossIncome
-    })
-  }) */
 
   return npc
 }

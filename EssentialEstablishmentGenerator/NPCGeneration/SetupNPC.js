@@ -14,7 +14,6 @@ setup.createNPC = function (town, base) {
   if (base.isShallow === true) {
     console.log('NPC flagged as shallow.')
     base.isThrowaway = base.isThrowaway || true
-    // base.canBeCustom = base.canBeCustom || true
     base.hasHistory = base.hasHistory || false
   }
 
@@ -53,7 +52,6 @@ setup.createNPC = function (town, base) {
     ageStage,
     ageYears: data.raceTraits[race].ageTraits[ageStage].baseAge + data.raceTraits[race].ageTraits[ageStage].ageModifier(),
     muscleMass: data.raceTraits[race].muscleMass + dice(5, 4) - 12,
-    // demeanour: data.demeanour.seededrandom(),
     calmTrait: data.calmTrait.seededrandom(),
     stressTrait: data.stressTrait.seededrandom(),
     pronouns: {
@@ -68,9 +66,6 @@ setup.createNPC = function (town, base) {
     finances: {
       dailyWage: ''
     },
-    // value: data.value.seededrandom(),
-    // drive: data.drive.seededrandom(),
-    // belief: data.belief.seededrandom(),
     hairColour: data.hairColour.seededrandom(),
     hairType: data.hairType.seededrandom(),
     get hair () {
@@ -105,7 +100,6 @@ setup.createNPC = function (town, base) {
     trait: data.trait.seededrandom(),
     currentMood: data.currentMood,
     hasHistory: base.hasHistory || false,
-    // id: Math.floor(randomFloat(1) * 0x10000),
     idle: data.idle,
     get gender () {
       return this._gender
@@ -132,7 +126,6 @@ setup.createNPC = function (town, base) {
     reading: data.reading.seededrandom(),
 
     family: undefined
-    // pubRumour: setup.createPubRumour()
   }, base)
 
   npc.gender = npc.gender || npc._gender
@@ -163,13 +156,9 @@ setup.createNPC = function (town, base) {
       npc.vocalPattern = data.vocalPattern.seededrandom()
     }
   }
-  // setup.createName(npc)
-
-  // console.log(npc)
   setup.createAge(npc)
 
   setup.createRace(npc)
-  // This sets up the physical traits of NPCs
   const hair = setup.npcData.bodyParts.head.hair.seededrandom()
   const eyes = setup.npcData.bodyParts.head.eyes.seededrandom()
   const nose = setup.npcData.bodyParts.head.nose.seededrandom()
@@ -204,7 +193,6 @@ setup.createNPC = function (town, base) {
 
   setup.createDescriptors(npc)
   npc.formalName = npc.formalName || npc.title + ' ' + npc.lastName
-  // npc.key = npc.name
   State.variables.npcs[npc.key] = npc
   npc.profile = function (npc, base) {
     base = npc.name || base
@@ -217,17 +205,11 @@ setup.createNPC = function (town, base) {
 
   if (npc.hasHistory !== false) setup.ExpandNPC(town, npc)
 
-  /* if (npc.partnerID) {
-    console.log('assigning ' + npc.name + ' ' + State.variables.npcs[npc.partnerID].name + ' as a partner...')
-    setup.setAsPartners(npc, State.variables.npcs[npc.partnerID])
-  } */
   State.temporary.newNPC = npc
 
   if (npc.callbackFunction) {
     npc.callbackFunction(town, npc, base)
   }
-
-  // npc.doesnt = setup.weightedRandomFetcher(town, setup.npcData.doesnt, npc)
 
   console.log(npc)
   console.groupEnd()

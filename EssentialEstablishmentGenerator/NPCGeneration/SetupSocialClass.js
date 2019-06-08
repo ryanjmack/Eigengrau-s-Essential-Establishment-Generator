@@ -3,10 +3,7 @@ setup.socialClasses = [
   [195, 'aristocracy', 5],
   [95, 'aristocracy', 5],
   [80, 'nobility', 4],
-  // [75, 'high class'],
-  // [65, 'upper-middle class'],
   [60, 'commoner', 3],
-  // [40, 'lower-middle class'],
   [20, 'peasantry', 2],
   [10, 'paupery', 1],
   [0, 'indentured servitude', 0]
