@@ -1,6 +1,5 @@
 
 setup.createMagic = function (type) {
-  // var type = type || ['ring', 'trinket', 'weapon', 'armour'].seededrandom()
   console.log('type: ' + type)
   let magic
   if (type === 'ring') {
