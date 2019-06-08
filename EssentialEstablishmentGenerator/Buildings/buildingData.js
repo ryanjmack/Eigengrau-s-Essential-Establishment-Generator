@@ -41,7 +41,6 @@ setup.structure = {
     if (Object.keys(tempRoof).includes('variations')) {
       console.log('Building roof has variations. ')
       tempRoof = setup.weightedRandomFetcher(town, tempMaterial.variations, '', '', 'object')
-      // tempMaterial = temp2
       console.log(tempRoof.words)
     }
     if (tempRoof.canBeColoured === true) {
